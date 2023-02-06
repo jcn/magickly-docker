@@ -1,9 +1,8 @@
-FROM ruby:2.1.10
+FROM ruby:2.1.10-alpine
 
-RUN apt-get update
-RUN apt-get install -y imagemagick libgmp3-dev
+RUN apk add --no-cache build-base file imagemagick git
 
-RUN gem install puma
+RUN gem install puma -v 3.11.0
 
 WORKDIR /app
 
