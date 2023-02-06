@@ -9,9 +9,12 @@ WORKDIR /app
 RUN git clone https://github.com/afeld/magickly.git
 
 WORKDIR /app/magickly
-RUN bundle install
+RUN bundle config --global frozen 1
+RUN bundle install --without development test
+
+COPY ./magickly.ru /app/magickly/magickly.ru
 
 EXPOSE 9292
 
-CMD puma -t 1:1 -e production /app/magickly/config.ru
+CMD ["puma", "-t", "1:1", "-e", "production", "/app/magickly/magickly.ru"]
 
