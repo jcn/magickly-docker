@@ -13,4 +13,4 @@ This Dockerfile also works with [dokku](https://dokku.com/) directly using the D
 
 ## Requirements
 
-This Dockerfile is built off of the 2.1.10-alpine image, which is amd64 only.
+This Dockerfile is built off of the alpine:3.8 image which should support amd64 and arm64 platforms. We stick with 3.8 because Ruby 2.1.10 won't build on later versions due to OpenSSL issues.
