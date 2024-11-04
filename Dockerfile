@@ -1,4 +1,4 @@
-FROM ruby:2.1.10-alpine
+FROM ruby:2.7.8-alpine
 
 RUN apk add --no-cache build-base file imagemagick git
 
@@ -6,7 +6,7 @@ RUN gem install puma -v 3.11.0
 
 WORKDIR /app
 
-RUN git clone https://github.com/afeld/magickly.git
+RUN git clone https://github.com/jcn/magickly.git
 
 WORKDIR /app/magickly
 RUN bundle config --global frozen 1

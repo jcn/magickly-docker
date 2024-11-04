@@ -1,6 +1,6 @@
 # magickly-docker
 
-Simple Docker setup for [Magickly](https://github.com/afeld/magickly), which is no longer in active development. We mostly use [imgproxy](https://imgproxy.net/) these days, but needed a way to spin up a working Magickly instance.
+Simple Docker setup for [Magickly](https://github.com/jcn/magickly), which is no longer in active development. We mostly use [imgproxy](https://imgproxy.net/) these days, but needed a way to spin up a working Magickly instance.
 
 ## Build and Deploy
 
@@ -13,4 +13,4 @@ This Dockerfile also works with [dokku](https://dokku.com/) directly using the D
 
 ## Requirements
 
-This Dockerfile is built off of the 2.1.10-alpine image, which is amd64 only.
+This Dockerfile is built off of the ruby:2.7.8-alpine image.
